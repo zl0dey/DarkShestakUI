@@ -13,7 +13,7 @@ end
 LPSTAT_FONT = {
 	font = C.font.stats_font,				-- Path to your font
 	color = {1, 1, 1},						-- {red, green, blue} or "CLASS"
-	size = C.font.stats_font_size,			-- Point font size
+	size = 16,			-- Point font size
 	alpha = 1,								-- Alpha transparency
 	outline = 3,							-- Thin outline. 0 = no outline.
 	shadow = {alpha = C.font.stats_font_shadow and 1 or 0, x = 1, y = -1},	-- Font shadow = 1
@@ -182,10 +182,10 @@ LPSTAT_CONFIG = {
 	Gold = {
 		enabled = true,
 		style = 1, -- Display styles: [1] 55g 21s 11c [2] 8829.4g [3] 823.55.94
-		anchor_frame = cBN and "NivayacBniv_Bag" or C.bag.enable and "StuffingFrameBags" or "FPS",
-		anchor_to = "bottomright", anchor_from = cBN and "bottomright" or C.bag.enable and "topright" or "left",
-		x_off = cBN and -1 or C.bag.enable and -25 or -3,
-		y_off = cBN and 18 or C.bag.enable and -13 or 0,
+		anchor_frame = "Memory",
+		anchor_to = "bottomright", anchor_from = "left",
+		x_off = -60,
+		y_off = -7,
 		tip_frame = cBN and "NivayacBniv_Bag" or C.bag.enable and "StuffingFrameBags" or "UIParent",
 		tip_anchor = cBN and "TOPRIGHT" or C.bag.enable and "TOPRIGHT" or "BOTTOMRIGHT",
 		tip_x = cBN and 0 or C.bag.enable and -50 or -21,
