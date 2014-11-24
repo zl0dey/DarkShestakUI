@@ -533,9 +533,9 @@ T.PostUpdateHealth = function(health, unit, min, max)
 			elseif unit == "target" then
 				if C.unitframe.show_total_value == true then
 					if C.unitframe.color_value == true then
-						health.value:SetFormattedText("|cff559655%s|r |cffD7BEA5-|r |cff559655%s|r", T.ShortValue(min), T.ShortValue(max))
+						health.value:SetFormattedText("|cff559655%s|r |cffD7BEA5-|r |cff559655%s|r", T.ShortValue(min),  floor(min / max * 100), T.ShortValue(max))
 					else
-						health.value:SetFormattedText("|cffffffff%s - %s|r", T.ShortValue(min), T.ShortValue(max))
+						health.value:SetFormattedText("|cffffffff%s - %s|r", T.ShortValue(min),  floor(min / max * 100), T.ShortValue(max))
 					end
 				else
 					if C.unitframe.color_value == true then
